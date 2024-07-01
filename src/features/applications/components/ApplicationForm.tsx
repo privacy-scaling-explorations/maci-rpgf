@@ -130,7 +130,7 @@ export const ApplicationForm = ({ address = "" }: IApplicationFormProps): JSX.El
   const text = create.isAttesting ? "Creating attestation" : "Create application";
 
   return (
-    <div>
+    <div className="rounded-lg border border-gray-200 p-4">
       <Form
         defaultValues={{
           application: {
