@@ -207,6 +207,9 @@ importers:
       '@ethereum-attestation-service/eas-sdk':
         specifier: ^1.5.0
         version: 1.6.1(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))(typescript@5.5.4)(utf-8-validate@5.0.10)
+      '@hatsprotocol/sdk-v1-core':
+        specifier: ^0.10.0
+        version: 0.10.0(encoding@0.1.13)(viem@2.19.1(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)(zod@3.22.4))
       '@hookform/resolvers':
         specifier: ^3.3.4
         version: 3.9.0(react-hook-form@7.52.2(react@18.2.0))
@@ -295,11 +298,11 @@ importers:
         specifier: ^0.316.0
         version: 0.316.0(react@18.2.0)
       maci-cli:
-        specifier: 0.0.0-ci.1032f7a
-        version: 0.0.0-ci.1032f7a(kp6mbe6ih3mck4yt24st7gzjpa)
+        specifier: 0.0.0-ci.d644eae
+        version: 0.0.0-ci.d644eae(kp6mbe6ih3mck4yt24st7gzjpa)
       maci-domainobjs:
-        specifier: 0.0.0-ci.1032f7a
-        version: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        specifier: 0.0.0-ci.d644eae
+        version: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       next:
         specifier: ^14.1.0
         version: 14.2.5(@babel/core@7.25.2)(@playwright/test@1.46.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -1730,6 +1733,14 @@ packages:
 
   '@hapi/topo@5.1.0':
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
+
+  '@hatsprotocol/sdk-v1-core@0.10.0':
+    resolution: {integrity: sha512-NMMKj1jEc5CwtQ2YVajap2kaf3aOmZ/PhG2DRntLY6nE5DmAfA4DM299uY7eAgi5j2BAge/Hu3A9oF00HRkePw==}
+    peerDependencies:
+      viem: ^2.0.0
+
+  '@hatsprotocol/sdk-v1-subgraph@1.0.0':
+    resolution: {integrity: sha512-86c5oC18KCcaNCBBw+eemA09zmEyuh3xr4SflrOUDXuCdEQZ08M9WqgEe7tZNw2QURTGArwPVaCQ2j7bkMjdow==}
 
   '@hookform/resolvers@3.9.0':
     resolution: {integrity: sha512-bU0Gr4EepJ/EQsH/IwEzYLsT/PEj5C0ynLQ4m+GSHS+xKH4TfSelhluTgOaoc4kA5s7eCsQbM4wvZLzELmWzUg==}
@@ -9250,42 +9261,42 @@ packages:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
 
-  maci-circuits@0.0.0-ci.1032f7a:
-    resolution: {integrity: sha512-i7cD5r8y9HjvKRrdVkUkdNgtplge8dhA4S5XcfK8A5HPrujjvJOB5dSojlGvdhtRvhKgN4yIw7zJ6C8B+/HnXQ==}
+  maci-circuits@0.0.0-ci.d644eae:
+    resolution: {integrity: sha512-/iZ9OD10y7lkVs/oMbEGvFqveFgaKM7hBGVXxGgAH1N0oibZscxD8+81vku4v6cprFNPGBlo53xojQueJy/qHw==}
 
   maci-circuits@2.0.0:
     resolution: {integrity: sha512-zcRKHtZNVasJOSiIsFYbjNaT2TG59v/ohy7/zPNZvXiqylZXA0sICHDMYkawMYhdCk4aynE+dacVqWdHeJKFVw==}
 
-  maci-cli@0.0.0-ci.1032f7a:
-    resolution: {integrity: sha512-aQZYyf/rY+B2d1a9yMby0jbAvayTqIFW4iu62aHp2LysuvUzvKKY3TBM3B/DsUcY9dFfWZ59/KxBTDfEk5Rjog==}
+  maci-cli@0.0.0-ci.d644eae:
+    resolution: {integrity: sha512-f6r6n1llPbj319rcOz+RyRtYNsyW0Cd9X5+x3QIh76iJKVZS0PmXN5xjMURahfltSEq1y3LYf9Qp0LXkIt4UnA==}
     hasBin: true
 
   maci-cli@2.0.0:
     resolution: {integrity: sha512-LJGNY+VY4Vpzm++EZ6oFnNEW+fEN34DcSMZTEqus37dSSdFeJxUZDEIAHHESygvbS5twR566fGhDijir0382yA==}
     hasBin: true
 
-  maci-contracts@0.0.0-ci.1032f7a:
-    resolution: {integrity: sha512-FUgNL20dt86Ae5KR4dcsr/VjbeJEMzCZYZWOHmn0nfHVJBcUAeJHBRrjE4xEfriV9Z9yLoNtCz80Hbhx1eL6UQ==}
+  maci-contracts@0.0.0-ci.d644eae:
+    resolution: {integrity: sha512-6nXHOgfpAMNpLZIqzmYRldQh5Nh4SVAwyb9x/C+zb9c8V/AMhDCKe7Lq6yQWtkO8qGypXPi1zBy/OQtS9PD6XQ==}
     hasBin: true
 
   maci-contracts@2.0.0:
     resolution: {integrity: sha512-+Ase2pKiEXWN2mYk1T3T3vFaSFl3kEfmHn0ogsnwQjddTZS46RiDLGf+V8/yZSfbwaeYG/qDfTDc3wg6cbOcSg==}
     hasBin: true
 
-  maci-core@0.0.0-ci.1032f7a:
-    resolution: {integrity: sha512-2bOWhrPskDG74kDmeucwg2dgtV3g6wvbkbVRt5b1hyH5kxNo5ZdmOiuqkcp8EBXHMpiajMV+MrSO/Tc+VJ+EwA==}
+  maci-core@0.0.0-ci.d644eae:
+    resolution: {integrity: sha512-khP7TUycPlz70x8oDJD58Nv3+Ju4rS+FNipu+YJpYBl3Pwp2wFnEytIsc9vz+ZqQZA22b9eEn2GRfXa+LknOsA==}
 
   maci-core@2.0.0:
     resolution: {integrity: sha512-FI7L3QB5E2mNaHQNrjnfHjNGnpZMvmHN1ZBlHgRHgz1xu02c/uR4FrO8A9cudWoGJzefA/y+nEb4irdirfTFJA==}
 
-  maci-crypto@0.0.0-ci.1032f7a:
-    resolution: {integrity: sha512-++nXVWglikjjR3I0TelTwjW2HbWpZ6eVsijrJHViwSbWO765u+KfsJ3gmKtE/rIckHaFDPnapk9Liq648nIAKA==}
+  maci-crypto@0.0.0-ci.d644eae:
+    resolution: {integrity: sha512-k+d+cme1tE8MxEwPuBC7fhQ4nqPn3GvAcgiWK6M22k8djLUmVFLwssJ4AaClq2u9W+g7NJzpgJRSklwBmrEsdQ==}
 
   maci-crypto@2.0.0:
     resolution: {integrity: sha512-bkgOoDA1ABG49MXDzzsQPsFVEijAkLk8ocJKGyeNQS7YpNhC3YEVVz/SE4g0td+N4xJhD3PbXsyHeaTM3ApIjw==}
 
-  maci-domainobjs@0.0.0-ci.1032f7a:
-    resolution: {integrity: sha512-VX/aTWJpED9lcx5SICsY0wbc4zKtK6Sg4oVwOI30ELa6SfX41tayBTU9uNAn2Vg/bo3xR6IsQt2VlLnqtXOpYQ==}
+  maci-domainobjs@0.0.0-ci.d644eae:
+    resolution: {integrity: sha512-Yv0XRvmJ4vjToV0DUxM8Bwo3JpANGvOgwKn/7j2g2zT2kXHcOFO6vu7roHzG9N9YrMD1aEvldIvmVTidS2pW6Q==}
 
   maci-domainobjs@2.0.0:
     resolution: {integrity: sha512-FmQdIC1omsWR/98wt8WvEJj0SDfnVTl9/2FMDp3N4WwUy1lzmmlVjUGKSFKj2+dj2Rx26DmBWsmKhbTIQeoPOQ==}
@@ -15109,6 +15120,23 @@ snapshots:
   '@hapi/topo@5.1.0':
     dependencies:
       '@hapi/hoek': 9.3.0
+
+  '@hatsprotocol/sdk-v1-core@0.10.0(encoding@0.1.13)(viem@2.19.1(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)(zod@3.22.4))':
+    dependencies:
+      '@hatsprotocol/sdk-v1-subgraph': 1.0.0(encoding@0.1.13)
+      graphql: 16.9.0
+      graphql-request: 6.1.0(encoding@0.1.13)(graphql@16.9.0)
+      viem: 2.19.1(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)(zod@3.22.4)
+    transitivePeerDependencies:
+      - encoding
+
+  '@hatsprotocol/sdk-v1-subgraph@1.0.0(encoding@0.1.13)':
+    dependencies:
+      graphql: 16.9.0
+      graphql-request: 6.1.0(encoding@0.1.13)(graphql@16.9.0)
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - encoding
 
   '@hookform/resolvers@3.9.0(react-hook-form@7.52.2(react@18.2.0))':
     dependencies:
@@ -25360,14 +25388,14 @@ snapshots:
 
   lz-string@1.5.0: {}
 
-  maci-circuits@0.0.0-ci.1032f7a(@types/snarkjs@0.7.8)(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  maci-circuits@0.0.0-ci.d644eae(@types/snarkjs@0.7.8)(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
       '@zk-kit/circuits': 0.4.0
       circomkit: 0.2.1(@types/snarkjs@0.7.8)(snarkjs@0.7.4)
       circomlib: 2.0.5
-      maci-core: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-crypto: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-domainobjs: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-core: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-crypto: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-domainobjs: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       snarkjs: 0.7.4
     transitivePeerDependencies:
       - '@types/snarkjs'
@@ -25388,7 +25416,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  maci-cli@0.0.0-ci.1032f7a(kp6mbe6ih3mck4yt24st7gzjpa):
+  maci-cli@0.0.0-ci.d644eae(kp6mbe6ih3mck4yt24st7gzjpa):
     dependencies:
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@nomicfoundation/hardhat-toolbox': 5.0.0(qc2x6fg2hvcwib2hi3ibxymkay)
@@ -25396,11 +25424,11 @@ snapshots:
       dotenv: 16.4.5
       ethers: 6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       hardhat: 2.22.7(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))(typescript@5.5.4)(utf-8-validate@5.0.10)
-      maci-circuits: 0.0.0-ci.1032f7a(@types/snarkjs@0.7.8)(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-contracts: 0.0.0-ci.1032f7a(7htv7pg2ka7ncyn53uwoaz3m6q)
-      maci-core: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-crypto: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-domainobjs: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-circuits: 0.0.0-ci.d644eae(@types/snarkjs@0.7.8)(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-contracts: 0.0.0-ci.d644eae(7htv7pg2ka7ncyn53uwoaz3m6q)
+      maci-core: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-crypto: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-domainobjs: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       prompt: 1.3.0
     transitivePeerDependencies:
       - '@nomicfoundation/hardhat-chai-matchers'
@@ -25462,7 +25490,7 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  maci-contracts@0.0.0-ci.1032f7a(7htv7pg2ka7ncyn53uwoaz3m6q):
+  maci-contracts@0.0.0-ci.d644eae(7htv7pg2ka7ncyn53uwoaz3m6q):
     dependencies:
       '@nomicfoundation/hardhat-ethers': 3.0.6(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(hardhat@2.22.7(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))(typescript@5.5.4)(utf-8-validate@5.0.10))
       '@nomicfoundation/hardhat-toolbox': 5.0.0(qc2x6fg2hvcwib2hi3ibxymkay)
@@ -25471,10 +25499,10 @@ snapshots:
       ethers: 6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       hardhat: 2.22.7(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))(typescript@5.5.4)(utf-8-validate@5.0.10)
       lowdb: 1.0.0
-      maci-circuits: 0.0.0-ci.1032f7a(@types/snarkjs@0.7.8)(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-core: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-crypto: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-domainobjs: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-circuits: 0.0.0-ci.d644eae(@types/snarkjs@0.7.8)(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-core: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-crypto: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-domainobjs: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       solidity-docgen: 0.6.0-beta.36(hardhat@2.22.7(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))(typescript@5.5.4)(utf-8-validate@5.0.10))
       uuid: 10.0.0
     transitivePeerDependencies:
@@ -25536,10 +25564,10 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  maci-core@0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  maci-core@0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
-      maci-crypto: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      maci-domainobjs: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-crypto: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-domainobjs: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -25552,7 +25580,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  maci-crypto@0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  maci-crypto@0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
       '@zk-kit/baby-jubjub': 1.0.1
       '@zk-kit/eddsa-poseidon': 1.0.2
@@ -25572,9 +25600,9 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  maci-domainobjs@0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  maci-domainobjs@0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
-      maci-crypto: 0.0.0-ci.1032f7a(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      maci-crypto: 0.0.0-ci.d644eae(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
