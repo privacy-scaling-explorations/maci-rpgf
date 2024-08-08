@@ -12,6 +12,7 @@ import {
   genKeyPair,
   GatekeeperTrait,
   getGatekeeperTrait,
+  getHatsSingleGatekeeperData,
 } from "maci-cli/sdk";
 import React, { createContext, useContext, useCallback, useEffect, useMemo, useState } from "react";
 import { useAccount, useSignMessage } from "wagmi";
@@ -19,6 +20,7 @@ import { useAccount, useSignMessage } from "wagmi";
 import { config } from "~/config";
 import { useEthersSigner } from "~/hooks/useEthersSigner";
 import { api } from "~/utils/api";
+import { getHatsClient } from "~/utils/hatsProtocol";
 import { getSemaphoreProof } from "~/utils/semaphore";
 
 import type { IVoteArgs, MaciContextType, MaciProviderProps } from "./types";
@@ -120,6 +122,23 @@ export const MaciProvider: React.FC<MaciProviderProps> = ({ children }: MaciProv
         break;
       case GatekeeperTrait.EAS:
         setSgData(attestationId);
+        setIsLoading(false);
+        break;
+      case GatekeeperTrait.Hats:
+        getHatsSingleGatekeeperData({
+          maciAddress: config.maciAddress!,
+          signer: signer!,
+        }).then(({ criterionHat }) => {
+          // we need to check if we are allowed to signup
+          const hatsClient = getHatsClient();
+          hatsClient.isWearerOfHat({ wearer: address!, hatId: BigInt(criterionHat.at(0)!) }).then((res) => {
+            if (res) {
+              setSgData(criterionHat.at(0));
+            } else {
+              setSgData(undefined);
+            }
+          });
+        });
         setIsLoading(false);
         break;
       default:
